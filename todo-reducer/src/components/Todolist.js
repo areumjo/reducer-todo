@@ -8,9 +8,6 @@ const Todolist = () => {
     const [state, dispatch] = useReducer(todoReducer, initialState);
     const [todo, setTodo] = useState("");
 
-    console.log('state:', state);
-    console.log('todo: ', todo);
-
     const handleSubmit = e => {
         e.preventDefault();
         dispatch({type: "ADD_TODO", payload: todo});
@@ -29,7 +26,7 @@ const Todolist = () => {
 
     return(
         <div className="todo-list">
-            <h1>To-do list</h1>
+            <h2>To-do list</h2>
             {state.todos.map(t => 
                 <Todo key={t.id} id={t.id} item={t.item} completed={t.completed} toggle={toggleCompleted}
                     />)}
@@ -41,9 +38,9 @@ const Todolist = () => {
                     placeholder="more todo..."
                     onChange={e => setTodo(e.target.value)}
                     />
-                <button onClick={handleSubmit}>add todo</button>
+                <button className="addtodo-btn" onClick={handleSubmit}>Add todo</button>
             </form>
-            <button onClick={handleClear}>Clear completed</button>
+            <button className="clear-btn" onClick={handleClear}>Clear completed</button>
         </div>
     )
 }

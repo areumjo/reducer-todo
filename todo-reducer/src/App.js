@@ -7,9 +7,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>To-do list using Reducer</p>
+        <h1>To-do list using Reducer</h1>
       </header>
-      <Todolist />
+      <div className="outer-todo-list">
+        <div className="lines"></div>
+          <Todolist />
+        </div>
     </div>
   );
 }

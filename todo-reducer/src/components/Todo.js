@@ -4,7 +4,7 @@ const Todo = ({id, completed, item, toggle}) => {
     
     return (
         <div className={completed ? "completed" : null}>
-            <p onClick={()=>toggle(id)}>{item}</p>
+            <p className="todo" onClick={()=>toggle(id)}>{item}</p>
         </div>
     )
 }

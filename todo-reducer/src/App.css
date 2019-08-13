@@ -1,22 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body {
+  padding: 40px;
+  background-color: #282727; 
+  font-family: 'Source Code Pro', monospace;  
+  color: rgba(255,255,255,0.85);
+}
+
 .App {
   text-align: center;
+  text-align: center;
+  max-width: 60vw;
+  max-height: 70vh;
+  margin: 20px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  font-family: 'Source Code Pro', monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.outer-todo-list {
+  background-color: #f5f5f5;
+  max-width: 600px;
+  height: 70vh;
+  margin: 0 auto;
+  padding: 0;
+  
+}
+
+.lines {
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  float: left;
+  height: 70vh;
+  margin-left: 40px; 
+}
+
+.todo-list {
+  color: #555;
+  font-size: 22px;
+  width: 100%;
+  font-family: courier, monospace;
+}
+
+.todo-list h2 {
+  padding: 20px;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .completed {
+  color: rgb(167, 166, 166);
   text-decoration: line-through;
 }
+
+form {
+  margin-top: 50px;
+}
+
+input {
+  background-color: #f5f5f5;
+  border: 0;
+  padding: 6px 0;
+  font-size: 1rem;
+  width: 240px;
+  outline: 0;
+  color: white;
+  border-bottom: 1px solid #ffaa9f;
+  margin-right: 8px;
+}
+
+.addtodo-btn {
+  padding: 5px 14px;
+  border: none;
+  background-color: #ffaa9f;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  border-radius: 20px;
+  font-family: courier, monospace;
+}
+
+.clear-btn {
+  margin-top: 20px;
+  padding: 5px 14px;
+  border: none;
+  background-color: #ffaa9f;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  border-radius: 20px;
+  font-family: courier, monospace;
+}
+
