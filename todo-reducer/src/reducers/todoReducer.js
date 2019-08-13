@@ -16,32 +16,22 @@ export const todoReducer = (state, action) => {
             return {
                 todos: [...state.todos, {item: action.payload, completed: false, id: new Date().getTime()}]
             };
+
         case "TOGGLE":
-            console.log('asdf',action.payload);
-            const toggleId = action.payload;
-            const todos = state.todos;
-            for (let i=0; i<todos.length; i++) {
-                if (todos[i].id === toggleId) {
-                    todos[i].completed = !todos[i].completed;
+            for (let i=0; i<state.todos.length; i++) {
+                if (state.todos[i].id === action.payload) {
+                    state.todos[i].completed = !state.todos[i].completed;
                 }
             }
             return {
-                todos: todos
+                todos: state.todos
             };
-            // return console.log('state: ', state, 'action.payload: ', action.payload)
-            // state.todos.map(todo => {
-            //     if (todo.id === action.payload.id) {
-            //       return {todo.completed: !completed}
-                  //console.log('check, payload', action.payload)
-                // }
-                // return console.log('check, payload: ', state.todos.map(a=>a.completed));
-            // return 
-            //      state
-            //     if (state.todos.map(a => a.id===action.payload.id))
-            // {
-            //     todos : state.todos.map(a => a.id === action.payload.id)
-            // }
 
+        case "CLEAR":
+            return {
+                todos: state.todos.filter(a => !a.completed)
+            };
+            
         default:
             return state;
     }

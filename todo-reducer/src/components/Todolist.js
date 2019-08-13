@@ -17,10 +17,14 @@ const Todolist = () => {
         setTodo("");
     }
 
-    const toggleCompleted = e => {
-        console.log('toggle completed clicked')
-        // e.preventDefault();
-        dispatch({type: "TOGGLE", payload: e});
+    const toggleCompleted = id => {
+        console.log('toggle completed clicked');
+        dispatch({type: "TOGGLE", payload: id});
+    }
+
+    const handleClear = () => {
+        console.log('clear button clicked');
+        dispatch({type: "CLEAR"})
     }
 
     return(
@@ -39,6 +43,7 @@ const Todolist = () => {
                     />
                 <button onClick={handleSubmit}>add todo</button>
             </form>
+            <button onClick={handleClear}>Clear completed</button>
         </div>
     )
 }
