@@ -89,3 +89,16 @@ After finishing your required elements, you can push your work further. These go
 - Add a property on the todos for when a todo should be completed by. Then display that a todo is "overdue" if it has not been completed by its due date
 - Add "tags" to your todos, and display them with your todo list
 - Have fun with the styling. Make this something you'd be proud to show off!
+
+### Screenshot of the app
+
+![](./todo-reducer/src/redux-todo.png)
+
+- Features 
+  - Add todo
+  - Toggle to strike completed todo
+  - Clear completed todo
+- TODO for this todo app
+  - Add 'due-day' feature
+  - Add 'tags' so you can categorize your todos
+
