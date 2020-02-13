@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Todo = ({id, completed, item, toggle}) => {
-    
+const Todo = ({id, completed, item, toggle, tag}) => {
+    // console.log(tag)
     return (
         <div className={completed ? "completed" : null}>
-            <p className="todo" onClick={()=>toggle(id)}>{item}</p>
+            <span className="tag">{tag}</span><p className="todo" onClick={()=>toggle(id)}>{item}</p>
         </div>
     )
 }

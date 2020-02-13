@@ -24,11 +24,16 @@ const Todolist = () => {
         dispatch({type: "CLEAR"})
     }
 
+    const tagSelect = id => {
+        console.log('tag clicked', id);
+
+    }
+
     return(
         <div className="todo-list">
             <h2>To-do list</h2>
             {state.todos.map(t => 
-                <Todo key={t.id} id={t.id} item={t.item} completed={t.completed} toggle={toggleCompleted}
+                <Todo key={t.id} id={t.id} item={t.item} completed={t.completed} toggle={toggleCompleted} tag={t.tag}
                     />)}
             <form>
                 <input 

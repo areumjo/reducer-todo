@@ -92,3 +92,6 @@ input {
   font-family: courier, monospace;
 }
 
+.tag {
+  font-size: 0.8rem;
+}
